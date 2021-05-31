@@ -31,10 +31,10 @@ pip install --upgrade pip
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
-with open(path.join(here, 'README.md')) as f:
+with open(path.join(here, 'README.md',encoding='utf8')) as f:
     long_description = f.read()
 
-with open(path.join(here, 'requirements.txt')) as requirements_file:
+with open(path.join(here, 'requirements.txt',encoding='utf8')) as requirements_file:
     # Parse requirements.txt, ignoring any commented-out lines.
     requirements = [line for line in requirements_file.read().splitlines()
                     if not line.startswith('#')]
